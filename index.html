@@ -3,22 +3,161 @@
     <head>
         <title>Shreyas Verma</title>
         <meta charset="utf-8">
-        <meta name="description" content="Hi, I'm Shreyas">
+        <meta name="description" content="Hi, I'm Shreyas. You can call me Shrey.">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
         <link rel = "stylesheet" type = "text/css" href = "css/myStyle.css"/>
         <link rel="preconnect" href="https://fonts.gstatic.com">
-        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Raleway&display=swap" rel="stylesheet">
+
+        <link href="https://vjs.zencdn.net/7.10.2/video-js.css" rel="stylesheet"/>
         
         <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
-        <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="./favicon/favicon-32x32.png">
         <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
         <link rel="manifest" href="favicon/site.webmanifest">
 
     </head>
 
     <body>
-        <p class="comingSoon">Hi, I'm Shreyas 👋 <br> It's a little empty right now <br> I'll have things up soon</p>
+        <div class="gridContainer">
+            <div class="logoItem">
+                <a href="https://www.shrey.digital">
+                    <div class="logoText">shreyas verma</div>
+                </a>
+            </div>
+
+            <div class="menuItem">
+                <div>
+                    <a href="/index.html#filmStartsHere" class="menuText">film</a>
+                   <!-- <a href="/index.html#stillsStartHere" class="menuText">stills</a> -->
+                    <a href="/about.html" class="menuText">about</a>
+                    <a href="./cv.pdf" target="_blank" class="menuText">resume</a>
+                </div>
+            </div>
+
+            <div class="rollItem">
+                <div class="out">
+                    <div class="video-container">
+                        <video id="my-video" class="video-js vjs-fluid" autoplay loop muted responsive preload="auto" data-setup="{}">
+                            <source src="./video/trailerv2.mp4" type="video/mp4"/>
+                            <p class="vjs-no-js">
+                                To view this video please enable JavaScript, and consider upgrading to a
+                                web browser that <a href="https://videojs.com/html5-video-support/" target="_blank"> supports HTML5 video</a>
+                            </p>
+                        </video>  
+                    </div>
+                </div>
+            </div>
+
+            <div class="filmTitleItem" id="filmStartsHere">
+                <span class="titleText">
+                    film /
+                </span>
+
+            </div>
+
+            <div class="filmItem">
+                <div class="workGrid">
+            
+                        <div class="workCover">
+                            <a href="./film1.html">
+                                <img src="./images/tim-lloyd-and-the-door-full.png" alt="Tim Lloyd and the Door cover"  width="100%" class="filmCoverImage">
+                                <div class="caption">'Tim, Lloyd, and the Door'</div>
+                            </a>
+                        </div>
+
+                    <div class="workCover">
+                        <a href="./film2.html">
+                            <img src="./images/card-scene-cover.PNG" alt="Card Scene cover"  width="100%" class="filmCoverImage">
+                            <div class="caption">'Card Scene'</div>
+                        </a>
+                    </div>
+
+                    <div class="workCover">
+                        <a href="./film3.html">
+                            <img src="./images/living-cover.png" alt="Living Pictures Sequence cover"  width="100%" class="filmCoverImage">
+                            <div class="caption">'Living Pictures Sequence'</div>
+                        </a>
+                    </div>
+                    
+                    <div class="workCover">
+                        <a href="./film4.html">
+                            <img src="./images/leon-cover.png" alt="Leon's Lie cover"  width="100%" class="filmCoverImage">
+                            <div class="caption">'Leon's Lie'</div>
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+<!--
+            <div class="stillsTitleItem" id="stillsStartHere">
+                <span class="titleText">
+                    stills /
+                </span>
+
+            </div>
+
+            <div class="stillsItem">
+                <div class="workGrid">
+            
+                        <div class="workCover">
+                            <a href="#">
+                                <img src="./filmCover/still1.jpg" alt="Film Still 1 Alt Text"  width="100%" class="filmCoverImage">
+                                <div class="caption">'Silence'</div>
+                            </a>
+                        </div>
+
+                    <div class="workCover">
+                        <a href="#">
+                            <img src="./filmCover/still2.jpg" alt="Film Still 2 Alt Text"  width="100%" class="filmCoverImage">
+                            <div class="caption">'Heaven'</div>
+                        </a>
+                    </div>
+
+                    <div class="workCover">
+                        <a href="#">
+                            <img src="./filmCover/still3.png" alt="Film Still 3 Alt Text"  width="100%" class="filmCoverImage">
+                            <div class="caption">'A light wind'</div>
+                        </a>
+                    </div>
+                    
+                    <div class="workCover">
+                        <a href="#">
+                            <img src="./filmCover/still4.png" alt="Film Still 4 Alt Text"  width="100%" class="filmCoverImage">
+                            <div class="caption">'Quiet now'</div>
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+-->
+            <div class="footerItem footerFlexbox">
+                <div>
+                    <a href="https://www.instagram.com/shreyasverma" target="_blank">
+                        <img src="./svg/logo-instagram.svg" alt="Instagram Logo" width="24px" class="socialIcon">
+                    </a>
+                </div>
+                <div>
+                    <a href="https://www.twitter.com/shreyas_verma10" target="_blank">
+                        <img src="./svg/logo-twitter.svg" alt="Twitter Logo" width="24px" class="socialIcon">
+                    </a>
+                </div>
+                <div>
+                    <a href="#">
+                        <img src="./svg/logo-linkedin.svg" alt="Linkedin Logo" width="24px" class="socialIcon">
+                    </a>
+                </div>
+                <div>
+                    <a href="mailto:shreyas.verma2002@gmail.com">
+                        <img src="./svg/email.svg" alt="Email Logo" width="24px">
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <script src="https://vjs.zencdn.net/7.10.2/video.min.js"></script>
+        
     </body>
 
 </html>
