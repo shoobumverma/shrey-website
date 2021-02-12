@@ -1,61 +1,695 @@
 body {
-    font-family: 'Inter', sans-serif;
-    margin:0px auto;
-    padding:0px;
-    text-align:center;
-    width:100%;
+    font-family: 'Playfair Display', serif;;
+    line-height: 1.6em;
+    color: #070504;
+    background-color: #ffffff;
+    margin: 0px;
+    position: relative;
+}
+
+html {
+    overflow-y: scroll;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+a {
+    color: #070504;
+    text-decoration: none;
+}
+
+a:visited {
+    color: #070504;
+    text-decoration: none;
+}
+
+a.menuText:hover{
+    color: #070504;
+    border-bottom: 1px solid ;
+}
+
+.gridContainer {
+    display: grid;
+    padding: 0px 100px;
+    grid-template-rows: auto auto auto auto auto auto auto;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 0px;
+    grid-template-areas: "logo menu" "trailerRoll trailerRoll" "filmTitle filmTitle" "film film" "stillsTitle stillsTitle" "stills stills" "footer footer";
+    justify-items: center;
+    justify-content: center;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.logoItem {
+    grid-area: logo;
+    padding: 50px 0px;
+    justify-self: start;
+}
+
+.logoText {
+    font-size: 2.5em;
+    font-weight: 400;   
+}
+
+.menuItem {
+    grid-area: menu;
+    padding: 50px 0px;
+    justify-self: end;
+}
+
+.menuText {
+    font-size: 1.2em;
+    font-weight: 400;
+    margin-left: 32px;
+}
+
+.rollItem {
+    grid-area: trailerRoll;
     height: 100%;
+    width: 100vw;
+}
+
+.out {
     display: flex;
-    color: #0e1111;
+    align-items: center;
+    max-height: 600px;
+    overflow: hidden;
 }
 
-.comingSoon {
-    margin: 40vh auto auto;
-    font-size: 14px;
-    line-height: 1.8em;
-
-    /* animation */
-
-    -webkit-animation: fadeinUp 1.5s ease-out forwards; /* Safari, Chrome and Opera > 12.1 */
-       -moz-animation: fadeinUp 1.5s ease-out forwards; /* Firefox < 16 */
-        -ms-animation: fadeinUp 1.5s ease-out forwards; /* Internet Explorer */
-         -o-animation: fadeinUp 1.5s ease-out forwards; /* Opera < 12.1 */
-            animation: fadeinUp 1.5s ease-out forwards;
+.video-container {
+    width: 100%;
 }
 
-@media (max-width: 640px) {
-    .comingSoon {
-        font-size: 18px;
-        max-width: 350px;
-        line-height: 1.8em;
+.filmTitleItem {
+    grid-area: filmTitle;
+    margin: 50px 0px 0px;
+    padding: 32px 0px;
+    justify-self: start;
+}
+
+.stillsTitleItem {
+    grid-area: stillsTitle;
+    margin: 50px 0px 0px;
+    padding: 32px 0px;
+    justify-self: start;
+}
+
+.titleText {
+    font-size: 1.7em;
+    text-align: left;
+}
+
+.filmItem {
+    grid-area: film;
+}
+
+.stillsItem {
+    grid-area: stills;
+}
+
+.workGrid {
+    display: grid;
+    margin: 0px 0px 32px;
+    grid-template-rows: auto auto;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 24px;
+    justify-items: center;
+    justify-content: center;
+}
+
+.workCover {
+    position: relative;
+    width: 100%;
+    background: #070504;
+}
+
+.hoverContainer {
+    position: relative;
+    width: 50%;
+    background: black;
+}
+
+.filmCoverImage {    
+    opacity: 1;
+    display: block;
+    width: 100%;
+    height: auto;
+    transition: .4s ease;
+    backface-visibility: hidden;
+}
+
+.workCover:hover .filmCoverImage {
+    opacity: 0.3;
+}
+
+.workCover:hover .caption {
+    opacity: 1;
+}
+
+.caption {
+    color: #ffffff;
+    font-size: 1.2em;
+
+    transition: .5s ease;
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    text-align: center;
+  }
+
+
+.footerItem {
+    grid-area: footer;
+    padding: 50px 0px;
+    justify-self: center;
+}
+
+.footerFlexbox {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.socialIcon {
+    width: 20px;
+    margin-right: 16px;
+}
+
+
+/*about page*/
+
+.aboutGrid {
+    grid-area: trailerRoll;
+    display: grid;
+    padding: 0px 0px;
+    grid-template-rows: auto auto;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 64px;
+    justify-content: space-between;
+    margin: 50px auto 0;
+    width: 100%;
+
+}
+
+.aboutContent {
+    font-family: Raleway, serif;
+    font-size: 1.0em;
+    justify-self: start;
+
+}
+
+.shreyasPhotoDiv {
+    justify-self: end;
+}
+
+.shreyPic {
+    width: 25vw;
+}
+
+/*film page*/
+
+.filmContainer {
+    display: grid;
+    padding: 0px 100px;
+    grid-template-rows: auto auto auto auto auto;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 0px;
+    grid-template-areas: "logo menu" "filmVideo filmVideo" "filmVideoTitle filmVideoTitle" "filmDescription filmDescription" "planningTitle planningTitle" "planningGrid planningGrid" "footer footer";
+    justify-items: center;
+    justify-content: center;
+    max-width: 1400px;
+    margin: 0 auto;
+    display: relative;
+}
+
+.mainFilmItem {
+    grid-area: filmVideo;
+}
+
+.videoFlexbox {
+    display: flex;
+    align-items: center;
+}
+
+.filmInfoItem {
+    grid-area: filmVideoTitle;
+}
+
+.videoTitleItem {
+    grid-area: filmVideoTitle;
+    margin: 50px 0px 0px;
+    padding: 0px 0px;
+    justify-self: start;
+}
+
+.filmDescriptionItem {
+    grid-area: filmDescription;
+    padding: 32px 0px;
+    margin-bottom: 80px;
+    justify-self: start;
+}
+
+.video-js {
+    width: 100vw;
+}
+
+.descText {
+    font-family: Raleway, sans-serif;
+    font-size: 1rem;
+}
+
+.smoldescText {
+    font-family: Raleway, sans-serif;
+    font-size: 0.9rem;
+}
+
+.planningTitleItem {
+    grid-area: planningTitle;
+    margin: 0px 0px 24px;
+    justify-self: start;
+}
+
+.smolTitle {
+    font-size: 1.5rem;
+}
+
+.filmTitleText {
+    font-size: 1.7rem;
+    text-align: left;
+    font-weight: 600;
+}
+
+.planningAreaItem {
+    grid-area: planningGrid;
+}
+
+.planGrid {
+    display: grid;
+    margin: 32px 0px 32px;
+    grid-template-rows: auto auto;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 16px;
+    justify-items: center;
+    justify-content: center;
+}
+
+.planningGridDiv {
+    height: 250px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.sectionDivider {
+    border-top: 1px solid #f1f1f1;
+    margin-top: 100px;
+}
+
+.btsVideoCrop {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-height: 250px;
+    overflow: hidden;
+    max-width: 100%
+}
+
+/*mobile*/
+@media only screen and (min-width: 0px) and (max-width: 640px) {
+
+    .gridContainer {
+        padding: 0px 24px;
+        grid-template-rows: auto auto auto auto auto auto auto auto;
+        grid-template-areas: "logo logo" "menu menu" "trailerRoll trailerRoll" "filmTitle filmTitle" "film film" "stillsTitle stillsTitle" "stills stills" "footer footer";
+        max-width: 100vw;
+        margin: 0 auto;
+    }
+
+    .logoItem {
+        padding: 32px 0px;
+        justify-self: center;
+    }
+    
+    .logoText {
+        line-height: 1.2em;
+        text-align: center;   
+    }
+    
+    .menuItem {
+        padding: 32px 0px;
+        align-self: start;
+        padding: 0px 0px 32px;
+        justify-self: center;
+    }
+
+    .menuText {
+        font-size: 1.0em;
+        font-weight: 400;
+        margin-left: 12px;
+        margin-right: 12px;
+    }
+
+    .filmTitleItem {
+        margin: 24px 0px 0px;
+        padding: 16px 0px;
+    }
+
+    .stillsTitleItem {
+        margin: 24px 0px 0px;
+        padding: 16px 0px;
+    }
+
+    .titleText {
+        font-size: 1.4em;
+    }
+
+
+    .workGrid {
+        margin: 0px 0px 16px;
+        grid-template-rows: auto auto auto auto;
+        grid-template-columns: 1fr;
+        grid-gap: 24px;
+    }
+
+
+    .filmCoverImage {    
+        opacity: 1;
+        transition: none !important;
+    }
+
+    .hoverContainer {
+        position: relative;
+        width: 0%;
+    }
+    
+    .caption {
+        color: #ffffff;
+        font-size: 1em;
+        text-align: left;
+    
+        transition: none !important;
+        opacity: 1;
+        position: absolute;
+        top: 80%;
+        left: 5%;
+        transform: none !important;
+        -ms-transform: none !important;
+      }
+    
+    .footerItem {
+        padding: 32px 0px;
+    }
+
+    /*about page*/
+
+    .aboutGrid {
+        grid-template-rows: auto auto auto;
+        grid-template-columns: 1fr;
+        grid-gap: 0px;
+        justify-content: center;
+        margin: 0px auto 50px;
+        width: 100%;
+
+    }
+
+    .aboutContent {
+        font-family: Raleway, serif;
+        font-size: 1.0em;
+        justify-self: start;
+
+    }
+
+    .shreyasPhotoDiv {
+        justify-self: start;
+    }
+
+    .shreyPic {
+        width: 100%;
+    }
+
+    /*film page*/
+
+    .filmContainer {
+        padding: 0px 24px;
+        grid-template-rows: auto auto auto auto auto auto;
+        grid-template-areas: "logo logo" "menu menu" "filmVideo filmVideo" "filmVideoTitle filmVideoTitle" "filmDescription filmDescription" "planningTitle planningTitle" "planningGrid planningGrid" "footer footer";
+        max-width: 100vw;
+        margin: 0 auto;
+    }
+
+    .videoTitleItem {
+        grid-area: filmVideoTitle;
+        margin: 40px 0px 0px;
+    }
+
+    .filmDescriptionItem {
+        grid-area: filmDescription;
+        padding: 32px 0px;
+        margin-bottom: 0px;
+        justify-self: start;
+    }
+
+    .sectionDivider {
+        border-top: 1px solid #f1f1f1;
+        margin-top: 40px;
+    }
+    
+    .planGrid {
+        margin: 0px 0px 16px;
+        grid-template-rows: auto auto auto auto auto auto;
+        grid-template-columns: 1fr;
+    }
+
+    .planningGridDiv {
+        max-height: 300px;
+        object-fit: cover;
+        overflow: hidden;
     }
 }
 
-@keyframes fadeinUp {
-    from { opacity: 0; }
-    to   { opacity: 1; transform: translateY(-10px); }
+
+/*tablet*/
+@media only screen and (min-width: 641px) and (max-width: 990px) {
+
+    .gridContainer {
+        padding: 0px 32px;
+        grid-template-rows: auto auto auto auto auto auto auto;
+        grid-template-areas: "logo menu" "trailerRoll trailerRoll" "filmTitle filmTitle" "film film" "stillsTitle stillsTitle" "stills stills" "footer footer";
+        max-width: 100vw;
+        margin: 0 auto;
+    }
+
+    .logoItem {
+        padding: 40px 0px;
+    }
+    
+    .menuItem {
+        padding: 40px 0px;
+    }
+
+    .menuText {
+        font-size: 1.2em;
+        margin-left: 24px;
+    }
+
+    .filmTitleItem {
+        margin: 24px 0px 0px;
+        padding: 24px 0px;
+    }
+
+    .stillsTitleItem {
+        margin: 24px 0px 0px;
+        padding: 24px 0px;
+    }
+
+    .titleText {
+        font-size: 1.6em;
+    }
+
+    .workGrid {
+        margin: 0px 0px 16px;
+        grid-template-rows: auto auto auto auto;
+        grid-template-columns: 1fr;
+        grid-gap: 24px;
+    }
+
+    .filmCoverImage {    
+        opacity: 1;
+        transition: none !important;
+    }
+
+    .hoverContainer {
+        position: relative;
+        width: 0%;
+    }
+    
+    .caption {
+        color: #ffffff;
+        font-size: 1em;
+        text-align: left;
+    
+        transition: none !important;
+        opacity: 1;
+        position: absolute;
+        top: 80%;
+        left: 5%;
+        transform: none !important;
+        -ms-transform: none !important;
+      }
+    
+    .footerItem {
+        padding: 32px 0px;
+    }
+
+    /*about page*/
+
+    .aboutGrid {
+        padding: 32px 0px;
+        grid-template-rows: auto auto auto;
+        grid-template-columns: 1fr;
+        grid-gap: 0px;
+        justify-content: center;
+        margin: 0px auto 50px;
+        width: 60%;
+
+    }
+
+    .aboutContent {
+        font-family: Raleway, serif;
+        font-size: 1.0em;
+        justify-self: start;
+
+    }
+
+    .shreyasPhotoDiv {
+        justify-self: center;
+    }
+
+    .shreyPic {
+        width: 100%;
+    }
+
+    /*film page*/
+
+    .filmContainer {
+        padding: 0px 32px;
+        grid-template-rows: auto auto auto auto auto;
+        grid-template-areas: "logo menu" "filmVideo filmVideo" "filmVideoTitle filmVideoTitle" "filmDescription filmDescription" "planningTitle planningTitle" "planningGrid planningGrid" "footer footer";
+        max-width: 100vw;
+        margin: 0 auto;
+    }
+
+    .videoTitleItem {
+        grid-area: filmVideoTitle;
+        margin: 40px 0px 0px;
+    }
+
+    .filmDescriptionItem {
+        grid-area: filmDescription;
+        padding: 32px 0px;
+        margin-bottom: 0px;
+        justify-self: start;
+    }
+
+    .planGrid {
+        display: grid;
+        grid-template-rows: auto auto auto;
+        grid-template-columns: 1fr 1fr;
+        margin: 0px 0px 16px;
+    }
+
+    .planningGridDiv {
+        max-height: 300px;
+        object-fit: cover;
+        overflow: hidden;
+    }
+
 }
 
-/* Firefox < 16 */
-@-moz-keyframes fadeinUp {
-    from { opacity: 0; }
-    to   { opacity: 1; }
-}
+/*regular-screen*/
+@media only screen and (min-width: 991px) and (max-width: 1279px) {
+    
+    .gridContainer {
+        padding: 0px 100px;
+        max-width: 100vw;
+    }
 
-/* Safari, Chrome and Opera > 12.1 */
-@-webkit-keyframes fadeinUp {
-    from { opacity: 0; }
-    to   { opacity: 1; }
-}
+    .logoItem {
+        padding: 50px 0px;
+    }
+    
+    .menuItem {
+        padding: 50px 0px;
+    }
 
-/* Internet Explorer */
-@-ms-keyframes fadeinUp {
-    from { opacity: 0; }
-    to   { opacity: 1; }
-}
+    .menuText {
+        margin-left: 32px;
+    }
 
-/* Opera < 12.1 */
-@-o-keyframes fadeinUp {
-    from { opacity: 0; }
-    to   { opacity: 1; }
+    .filmTitleItem {
+        margin: 40px 0px 0px;
+        padding: 32px 0px;
+    }
+
+    .stillsTitleItem {
+        margin: 40px 0px 0px;
+        padding: 32px 0px;
+    }
+
+    .titleText {
+        font-size: 1.6em;
+    }
+
+    .workGrid {
+        margin: 0px 0px 24px;
+    }
+
+    .filmCoverImage {    
+        opacity: 1;
+        transition: none !important;
+    }
+
+    .hoverContainer {
+        position: relative;
+        width: 0%;
+    }
+    
+    .caption {
+        color: #ffffff;
+        font-size: 1em;
+        text-align: left;
+    
+        transition: none !important;
+        opacity: 1;
+        position: absolute;
+        top: 80%;
+        left: 5%;
+        transform: none !important;
+        -ms-transform: none !important;
+      }
+    
+    .footerItem {
+        padding: 40px 0px;
+    }
+
+    /*about page*/
+
+    .shreyPic {
+        width: 30vw;
+    }
+} 
+
+/*grid-padding*/
+@media only screen and (min-width: 1400px) and (max-width: 1600px) {
+    
+    .gridContainer {
+        padding: 0px 100px;
+        max-width: 100vw;
+    }
 }
