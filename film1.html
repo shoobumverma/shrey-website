@@ -10,9 +10,6 @@
 
         <link rel="preconnect" href="https://fonts.gstatic.com">
         <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Raleway&display=swap" rel="stylesheet">
-
-        <link href="https://vjs.zencdn.net/7.10.2/video-js.css" rel="stylesheet"/>
-        <link href="https://unpkg.com/@videojs/themes@1/dist/city/index.css" rel="stylesheet"/>
         
         <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
         <link rel="icon" type="image/png" sizes="32x32" href="./favicon/favicon-32x32.png">
@@ -39,14 +36,20 @@
             </div>
 
             <div class="mainFilmItem">
-                <div class="videoFlexbox">
-                    <video id="my-video" class="video-js vjs-theme-city filmVideo" responsive controls preload="auto" data-setup='{}' poster="./images/tim-lloyd-and-the-door.jpg" height="600px">
-                        <source src="./video/timdoor.mp4" type="video/mp4"/>
-                        <p class="vjs-no-js">
-                            To view this video please enable JavaScript, and consider upgrading to a
-                            web browser that <a href="https://videojs.com/html5-video-support/" target="_blank"> supports HTML5 video</a>
-                        </p>
-                    </video>
+                <div class="videoBox">
+                    <script src="https://fast.wistia.com/embed/medias/kkag6zusm2.jsonp" async>
+                    </script>
+                    <script src="https://fast.wistia.com/assets/external/E-v1.js" async>
+                    </script>
+                    <div class="wistia_responsive_padding" style="padding:75.0% 0 0 0;position:relative;">
+                        <div class="wistia_responsive_wrapper" style="height:100%;left:0;position:absolute;top:0;width:100%;">
+                            <div class="wistia_embed wistia_async_kkag6zusm2 seo=false videoFoam=true" style="height:100%;position:relative;width:100%">
+                                <div class="wistia_swatch" style="height:100%;left:0;opacity:0;overflow:hidden;position:absolute;top:0;transition:opacity 200ms;width:100%;">
+                                    <img src="https://fast.wistia.com/embed/medias/kkag6zusm2/swatch" style="filter:blur(5px);height:100%;object-fit:contain;width:100%;" alt="" aria-hidden="true" onload="this.parentNode.style.opacity=1;" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
 
@@ -58,7 +61,10 @@
 
             <div class="filmDescriptionItem">
                 <span class="descText">
-                    -pending-
+                    <em>Tim searches for a door; Lloyd tags along.</em>
+                    <br>
+                    <br>
+                    For this short film, my role as a cinematographer was to present shots in a continuous manner to maximise engagement in the film. 
 
                     <br>
                     <br>
@@ -142,8 +148,6 @@
                     </a>
                 </div>
             </div>
-
-        <script src="https://vjs.zencdn.net/7.10.2/video.min.js"></script>
 
     </body>
 </html>

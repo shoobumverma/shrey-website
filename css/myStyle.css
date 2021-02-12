@@ -231,9 +231,8 @@ a.menuText:hover{
     grid-area: filmVideo;
 }
 
-.videoFlexbox {
-    display: flex;
-    align-items: center;
+.videoBox {
+    width: 50vw;
 }
 
 .filmInfoItem {
@@ -249,7 +248,7 @@ a.menuText:hover{
 
 .filmDescriptionItem {
     grid-area: filmDescription;
-    padding: 32px 0px;
+    padding: 16px 0px 32px 0px;
     margin-bottom: 80px;
     justify-self: start;
 }
