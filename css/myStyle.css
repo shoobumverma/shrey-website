@@ -470,6 +470,10 @@ a.menuText:hover{
         object-fit: cover;
         overflow: hidden;
     }
+
+    .videoBox {
+        width: 100vw;
+    }
 }
 
 
@@ -608,6 +612,11 @@ a.menuText:hover{
         object-fit: cover;
         overflow: hidden;
     }
+
+    .videoBox {
+        width: 70vw;
+    }
+    
 
 }
 
