@@ -75,6 +75,14 @@ a.menuText:hover{
     align-items: center;
     max-height: 600px;
     overflow: hidden;
+    position: relative;
+}
+
+.doNotHover {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 10;
 }
 
 .video-container {
